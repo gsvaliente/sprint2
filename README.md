@@ -1,3 +1,6 @@
 # Sprint2
 
-Barcelona Activa Sprint 2 NodeJS.
+## MySQL
+
+- Optica
+- Pizzeria
