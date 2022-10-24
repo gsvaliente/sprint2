@@ -275,10 +275,7 @@ SELECT persona.apellido1, persona.apellido2,persona.nombre FROM persona JOIN pro
 SELECT COUNT(*) FROM persona WHERE tipo = 'alumno';
 SELECT COUNT(*) FROM persona WHERE tipo = 'alumno' AND fecha_nacimiento LIKE '1999%';
 SELECT COUNT(*) AS cantidad, departamento.nombre FROM departamento JOIN profesor ON departamento.id = profesor.id_departamento GROUP BY departamento.nombre ORDER BY cantidad DESC;
-SELECT COUNT(*) AS cantidad, departamento.nombre FROM departamento LEFT JOIN profesor ON departamento.id = profesor.id_departamento GROUP BY departamento.nombre ORDER BY cantidad DESC;  
-SELECT COUNT( * )FROM departamento
-LEFT JOIN profesor
-	ON departamento.id = profesor.id_departamento
-GROUP BY departamento.nombre;
+SELECT IFNULL(COUNT(profesor.id_profesor),0) AS cantidad, departamento.nombre FROM departamento LEFT JOIN profesor ON departamento.id = profesor.id_departamento GROUP BY departamento.nombre ORDER BY cantidad DESC;
+SELECT grado.nombre,COUNT(asignatura.nombre)AS cantidad FROM grado LEFT JOIN asignatura ON asignatura.id_grado = grado.id GROUP BY grado.nombre ORDER BY cantidad DESC;
 
-SELECT * FROM departamento;
+
