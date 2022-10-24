@@ -67,5 +67,9 @@ CREATE TABLE ventas (
     
 );
 
+USE optica;
 
+SELECT * FROM ventas WHERE cliente_id = 16 AND fecha BETWEEN '01/01/2020' AND '31/12/2020';
+SELECT DISTINCT gafas.marca, gafas.tipo_montura, empleados.nombre FROM gafas JOIN ventas  ON gafas.id = gafa_id JOIN empleados ON empleados.id = 1;
+SELECT DISTINCT proveedor.nombre FROM proveedor JOIN gafas ON proveedor.id = gafas.proveedor_id;
 
