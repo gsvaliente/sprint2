@@ -270,26 +270,12 @@ SELECT departamento.nombre FROM departamento JOIN grado ON grado.id = (SELECT gr
 SELECT DISTINCT persona.nombre, persona.id FROM persona JOIN alumno_se_matricula_asignatura AS alumno ON persona.id = id_alumno JOIN curso_escolar ON curso_escolar.id = (SELECT curso_escolar.id FROM curso_escolar WHERE anyo_inicio = 2018);
 SELECT departamento.nombre, persona.apellido1, persona.apellido2,persona.nombre FROM departamento LEFT JOIN profesor ON  profesor.id_departamento = departamento.id LEFT JOIN persona ON persona.id = profesor.id_profesor ORDER BY departamento.nombre, persona.apellido1,persona.apellido2,persona.nombre;
 
-SELECT persona.nombre FROM persona
-JOIN profesor ON persona.id = profesor.id_profesor
-LEFT JOIN departamento
-	ON departamento.id = profesor.id_departamento;
-
-
-SELECT * from departamento
-LEFT JOIN profesor ON departamento.id = profesor.id_departamento;
-
-SELECT nombre FROM persona WHERE tipo = 'profesor';
-SELECT departamento.nombre FROM departamento
-LEFT JOIN profesor ON profesor.id_profesor = profesor.id_departamento;
-
 -- CONSULTAS RESUMEN
 SELECT COUNT(*) FROM persona WHERE tipo = 'alumno';
 SELECT COUNT(*) FROM persona WHERE tipo = 'alumno' AND fecha_nacimiento LIKE '1999%';
 SELECT COUNT(*) AS cantidad, departamento.nombre FROM departamento JOIN profesor ON departamento.id = profesor.id_departamento GROUP BY departamento.nombre ORDER BY cantidad DESC;
 SELECT IFNULL(COUNT(profesor.id_profesor),0) AS cantidad, departamento.nombre FROM departamento LEFT JOIN profesor ON departamento.id = profesor.id_departamento GROUP BY departamento.nombre ORDER BY cantidad DESC;
 SELECT grado.nombre,COUNT(asignatura.nombre)AS cantidad FROM grado LEFT JOIN asignatura ON asignatura.id_grado = grado.id GROUP BY grado.nombre ORDER BY cantidad DESC;
-
 SELECT grado.nombre, COUNT(asignatura.nombre) AS cantidad FROM grado JOIN asignatura ON asignatura.id_grado = grado.id AND cantidad > 40 GROUP BY grado.nombre;
 SELECT grado.nombre, asignatura.tipo, COUNT(asignatura.creditos) as creditos FROM grado JOIN asignatura ON asignatura.id_grado = grado.id GROUP BY grado.nombre;
 SELECT curso_escolar.anyo_inicio, COUNT(*) AS alumnos FROM alumno_se_matricula_asignatura AS alumno JOIN persona ON alumno.id_alumno = persona.id JOIN curso_escolar ON alumno.id_curso_escolar = curso_escolar.id GROUP BY curso_escolar.anyo_inicio;
