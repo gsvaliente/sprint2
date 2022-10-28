@@ -3,7 +3,7 @@
 ## MySQL
 
 - 2.1 Level 1: Create a database using MySQL for an 'optica'. The database should be able to answer a few basic queries. I was able to resolve the majority without much trouble. It is complete, pending review. ✅
-- 2.1 Level 1 : Create a database using MySQL for a restaurant. I am having trouble with creating the tables and linking them to each other. Still working on it. ⛔️
+- 2.1 Level 1 : Create a database using MySQL for a restaurant. Created the database and queries work accordingly, pending review. ✅
 
 - 2.2 : Queries. Most of the queries are done, but I am having trouble with the joining and finding the 'null' values. ⛔️
 
