@@ -441,3 +441,98 @@ db.clientes.insertMany(
 }]
 )
 
+db.ventas.insertMany(
+  [
+    {
+      num_venta: 0001,
+      empleado: {
+        nombre: 'Raul Gomez',
+        id: 1
+      },
+      codigo_gafa: '635ad9aa602e696cb5b8978b',
+      codigo_cliente: '635b8067602e696cb5b897a6'
+    },
+    {
+      num_venta: 0002,
+      empleado: {
+        nombre: 'Silvia Grande',
+        id: 2
+      },
+      codigo_gafa: '635ade07602e696cb5b8978c',
+      codigo_cliente: '635b8067602e696cb5b897a7'
+    },
+    {
+      num_venta: 0003,
+      empleado: {
+        nombre: 'Silvia Grande',
+        id: 2
+      },
+      codigo_gafa: '635ade07602e696cb5b8978d',
+      codigo_cliente: '635b8067602e696cb5b897a8'
+    },
+    {
+      num_venta: 0004,
+      empleado: {
+        nombre: 'Tomas Feliz',
+        id: 3
+      },
+      codigo_gafa: '635ade07602e696cb5b8978e',
+      codigo_cliente: '635b8067602e696cb5b897a9'
+    },
+    {
+       num_venta: 0005,
+      empleado: {
+        nombre: 'Tomas Feliz',
+        id: 3
+      },
+      codigo_gafa: '635ade07602e696cb5b8978f',
+      codigo_cliente: '635b8067602e696cb5b897a9'
+    },
+    {
+       num_venta: 0006,
+      empleado: {
+        nombre: 'Tomas Feliz',
+        id: 3
+      },
+      codigo_gafa: '635ade07602e696cb5b89791',
+      codigo_cliente: '635b8067602e696cb5b897aa'
+    },
+    {
+      num_venta: 0007,
+      empleado: {
+        nombre: 'Raul Gomez',
+        id: 1
+        },
+      codigo_gafa: '635ade07602e696cb5b89793',
+      codigo_cliente: '635b8067602e696cb5b897aa'
+    },
+    {
+      num_venta: 0008,
+        empleado: {
+          nombre: 'Raul Gomez',
+          id: 1
+        },
+      codigo_gafa: '635ade07602e696cb5b8978d',
+      codigo_cliente: '635b8067602e696cb5b897a9'
+    },
+    {
+        num_venta: 0009,
+        empleado: {
+          nombre: 'Raul Gomez',
+          id: 1
+        },
+      codigo_gafa: '635ade07602e696cb5b89795',
+      codigo_cliente: '635b8067602e696cb5b897ab'
+    },
+    {
+      num_venta: 0010,
+      empleado: {
+        nombre: 'Silvia Grande',
+        id: 2
+      },
+      codigo_gafa: '635ade07602e696cb5b89796',
+      codigo_cliente: '635b8067602e696cb5b897b2'
+    }
+  ]
+)
+
