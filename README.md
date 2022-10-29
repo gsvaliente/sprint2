@@ -15,4 +15,4 @@
 
 - 2.3 Level 1 : Same as 2.1, pizza database. Yet to be completed. ⛔️
 
-- 2.4 : Queries. Completed almost all of the queries using mongo. Pending review. ✅
+- 2.4 : Queries. Completed almost all of the queries using mongo. Pending review. ✅... 21-24 & 30 missing.

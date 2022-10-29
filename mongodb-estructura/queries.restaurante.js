@@ -57,16 +57,11 @@ db.restaurante.find(
   { 'grades.score': { $lt: 10 } },
   { restaurant_id: 1, name: 1, borough: 1, cuisine: 1 }
 );
-
-// 21 ,22,23, 24 faltan
-
 db.restaurante.find({}).sort({ name: 1 });
 db.restaurante.find({}).sort({ name: -1 });
 db.restaurante.find({}).sort({ cuisine: 1 }, { borough: -1 });
 db.restaurante.find({ 'address.street': { $not: { $size: 0 } } });
 db.restaurante.find({ 'address.coord': { $size: 2 } });
-
-// 30
 db.restaurante.find(
   { name: /mon/ },
   { name: 1, borough: 1, 'address.coord': 1, cuisine: 1 }
