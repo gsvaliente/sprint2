@@ -9,7 +9,9 @@
 
 ## MongoDB
 
-- 2.3 Level 1 : Create the same database as the optic, but with MongoDB. I was able to figure it out, but after completing thought of another way to do it. Might be changed. 😑
+- 2.3 Level 1 : Create the same database as the optic, but with MongoDB. I was able to figure it out, but after completing thought of another way to do it. Might be changed. 😑. pending review. ✅
+
+- 2.3 Level 1 : Pizza database created with test data, pending review. ✅
 
 - 2.3 Level 1 : Same as 2.1, pizza database. Yet to be completed. ⛔️
 
