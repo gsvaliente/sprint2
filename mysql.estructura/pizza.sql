@@ -12,6 +12,10 @@ CREATE TABLE clientes(
     provincia VARCHAR(50) NOT NULL,
     telefono VARCHAR(15) NOT NULL UNIQUE
 );
+CREATE TABLE categorias (
+	id INT AUTO_INCREMENT PRIMARY KEY,
+	nombre VARCHAR(25)
+);
 
 CREATE TABLE productos (
 	id INT AUTO_INCREMENT PRIMARY KEY,
@@ -22,11 +26,6 @@ CREATE TABLE productos (
     precio INT NOT NULL,
     categoria_id INT,
     FOREIGN KEY (categoria_id) REFERENCES categorias(id)
-);
-
-CREATE TABLE categorias (
-	id INT AUTO_INCREMENT PRIMARY KEY,
-	nombre VARCHAR(25)
 );
 
 CREATE TABLE tiendas (
@@ -66,7 +65,6 @@ CREATE TABLE pedidos (
     FOREIGN KEY (empleado_id) REFERENCES empleados (id)
 );
 
-DROP TABLE pedidos;
 
 insert into clientes (nombre, apellido, direccion, codigo_postal, localidad, provincia, telefono) values ('Ferne', 'Speariett', '46944 Calypso Point', 18265, 'Terrassa', 'Cataluña', '170-532-9637');
 insert into clientes (nombre, apellido, direccion, codigo_postal, localidad, provincia, telefono) values ('Eden', 'Greensitt', '4 Golden Leaf Drive', 18358, 'Badalona', 'Cataluña', '612-958-3236');
@@ -152,6 +150,78 @@ insert into pedidos (fecha, hora, tipo, cant_bebida, cant_hamburguesa, cant_pizz
 insert into pedidos (fecha, hora, tipo, cant_bebida, cant_hamburguesa, cant_pizza, precio, cliente_id, tienda_id, empleado_id) values ('26/05/2021', '8:53:09 PM', 'delivery', 0, 3, 1, 42.73, 10, 1, 2);
 insert into pedidos (fecha, hora, tipo, cant_bebida, cant_hamburguesa, cant_pizza, precio, cliente_id, tienda_id, empleado_id) values ('16/07/2021', '1:06:40 PM', 'recogida', 1, 3, 2, 58.84, 4, 4, null);
 insert into pedidos (fecha, hora, tipo, cant_bebida, cant_hamburguesa, cant_pizza, precio, cliente_id, tienda_id, empleado_id) values ('08/04/2022', '6:23:36 PM', 'delivery', 3, 2, 2, 42.31, 3, 2, 6);
+
+CREATE TABLE orden_pedido (
+    pedido_id INT,
+    producto_id INT,
+    cantidad INT,
+    FOREIGN KEY (pedido_id) REFERENCES pedidos (id),
+    FOREIGN KEY (producto_id) REFERENCES productos (id)
+);
+
+INSERT INTO orden_pedido (pedido_id, producto_id, cantidad)
+VALUES
+(1,1,1),
+(1,7,1),
+(2,1,2),
+(3,4,3),
+(3,1,3),
+(4,1,2),
+(4,9,2),
+(5,2,1),
+(5,5,1),
+(5,8,2),
+(6,4,2),
+(6,3,1),
+(6,9,10),
+(7,1,1),
+(7,12,3),
+(8,4,1),
+(8,3,1),
+(8,11,2),
+(9,2,3),
+(9,5,1),
+(9,9,1),
+(10,12,1),
+(11,1,3),
+(11,9,1),
+(12,4,3),
+(12,11,1),
+(13,3,3),
+(13,9,2),
+(14,5,3),
+(14,1,3),
+(14,10,3),
+(15,4,3),
+(15,2,3),
+(15,9,1),
+(16,4,3),
+(16,3,3),
+(16,12,2),
+(17,4,3),
+(17,2,3),
+(17,7,3),
+(18,5,1),
+(18,9,3),
+(19,5,3),
+(19,3,3),
+(19,11,3),
+(20,1,1),
+(20,9,1),
+(21,4,2),
+(21,8,2),
+(22,4,3),
+(22,1,3),
+(22,7,1),
+(23, 1,2),
+(23,2,1),
+(23,7,1),
+(24,4,1),
+(24,1,3),
+(24,7,2),
+(25,4,3),
+(25,1,2),
+(25,7,2);
 
 SELECT SUM(pedidos.cant_bebida) AS 'cantidad de bebidas vendidas', tiendas.id FROM pedidos
 JOIN tiendas 

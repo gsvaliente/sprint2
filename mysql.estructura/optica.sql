@@ -120,3 +120,5 @@ SELECT * FROM ventas WHERE cliente_id = 1;
 SELECT DISTINCT * FROM ventas WHERE empleado_id = 1 AND fecha BETWEEN '2021-01-01' AND '2021-12-31';
 SELECT DISTINCT proveedores.nombre FROM proveedores JOIN ventas ON proveedores.id = ventas.proveedor_id;
 
+
+
