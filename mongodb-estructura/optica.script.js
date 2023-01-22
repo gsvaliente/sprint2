@@ -189,7 +189,7 @@ db.clientes.insertMany([
     telefono: '526-987-9650',
     correo: 'pmathie2@last.fm',
     fecha_registro: '11/04/2022',
-    recomendado: '635b8067602e696cb5b897a6',
+    recomendado: 'ObjectId(635b8067602e696cb5b897a6)',
   },
   {
     nombre: 'Koo Brimley',
@@ -213,7 +213,7 @@ db.clientes.insertMany([
     telefono: '451-416-7917',
     correo: 'kpetrolli5@sphinn.com',
     fecha_registro: '12/01/2021',
-    recomendado: '635b8067602e696cb5b897a6',
+    recomendado: 'ObjectId(635b8067602e696cb5b897a6)',
   },
   {
     nombre: 'Dickie Sweed',
@@ -229,7 +229,7 @@ db.clientes.insertMany([
     telefono: '356-396-0305',
     correo: 'jsizeland7@lulu.com',
     fecha_registro: '30/07/2022',
-    recomendado: '635b8067602e696cb5b897ac',
+    recomendado: 'ObjectId(635b8067602e696cb5b897ac)',
   },
   {
     nombre: 'Brinna Crooke',
@@ -269,7 +269,7 @@ db.clientes.insertMany([
     telefono: '299-185-0132',
     correo: 'frawsthornec@cyberchimps.com',
     fecha_registro: '29/07/2021',
-    recomendado: '635b8067602e696cb5b897af',
+    recomendado: 'ObjectId(635b8067602e696cb5b897af)',
   },
   {
     nombre: 'Reine McKernon',
@@ -285,7 +285,7 @@ db.clientes.insertMany([
     telefono: '886-958-2095',
     correo: 'msutherele@facebook.com',
     fecha_registro: '15/12/2022',
-    recomendado: "'635b8067602e696cb5b897b3'",
+    recomendado: 'ObjectId(635b8067602e696cb5b897b3)',
   },
 ]);
 
@@ -296,25 +296,25 @@ db.empleados.insertMany([
       {
         id_venta: 1,
         id_gafa: 1,
-        id_cliente: '635b8067602e696cb5b897a6',
+        id_cliente: 'ObjectId(635b8067602e696cb5b897a6)',
         fecha: '04/15/2021',
       },
       {
         id_venta: 7,
         id_gafa: 6,
-        id_cliente: '635b8067602e696cb5b897aa',
+        id_cliente: 'ObjectId(635b8067602e696cb5b897aa)',
         fecha: '12/17/2021',
       },
       {
         id_venta: 8,
         id_gafa: 4,
-        id_cliente: '635b8067602e696cb5b897a9',
+        id_cliente: 'ObjectId(635b8067602e696cb5b897a9)',
         fecha: '2/4/2022',
       },
       {
         id_venta: 9,
         id_gafa: 2,
-        id_cliente: '635b8067602e696cb5b897ab',
+        id_cliente: 'ObjectId(635b8067602e696cb5b897ab)',
         fecha: '12/17/2021',
       },
     ],
@@ -325,19 +325,19 @@ db.empleados.insertMany([
       {
         id_venta: 2,
         id_gafa: 2,
-        id_cliente: '635b8067602e696cb5b897a7',
+        id_cliente: 'ObjectId(635b8067602e696cb5b897a7)',
         fecha: '10/23/2021',
       },
       {
         id_venta: 3,
         id_gafa: 5,
-        id_cliente: '635b8067602e696cb5b897a8',
+        id_cliente: 'ObjectId(635b8067602e696cb5b897a8)',
         fecha: '12/27/2021',
       },
       {
         id_venta: 10,
         id_gafa: 12,
-        id_cliente: '635b8067602e696cb5b897b2',
+        id_cliente: 'ObjectId(635b8067602e696cb5b897b2)',
         fecha: '5/19/2022',
       },
     ],
@@ -348,19 +348,19 @@ db.empleados.insertMany([
       {
         id_venta: 4,
         id_gafa: 10,
-        id_cliente: '635b8067602e696cb5b897a9',
+        id_cliente: 'ObjectId(635b8067602e696cb5b897a9)',
         fecha: '6/2/2022',
       },
       {
         id_venta: 5,
         id_gafa: 9,
-        id_cliente: '635b8067602e696cb5b897aa',
+        id_cliente: 'ObjectId(635b8067602e696cb5b897aa)',
         fecha: '7/1/2022',
       },
       {
         id_venta: 6,
         id_gafa: 7,
-        id_cliente: '635b8067602e696cb5b897aa',
+        id_cliente: 'ObjectId(635b8067602e696cb5b897aa)',
         fecha: '10/13/2022',
       },
     ],
